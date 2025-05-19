@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ROUTE INDONESIA - Download Rute</title>
+  <style>
+        body {
+        margin: 0;
+        height: 100vh;
+        background-color: silver;
+        );
+      }
+    .container {
+      background: white;
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 90%;
+    }
+    h1 {
+      text-align: center;
+      color: #F6DDCC;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      font-size: 10px;
+    }
+    .button {
+      display: block;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      padding: 5px;
+      margin: 10px 0;
+      border-radius: 100px;
+      text-align: center;
+      transition: background 0.5s ease;
+    }
+    .button:hover {
+      background: #0056b3;
+    }
+    .note {
+      font-size: 16px;
+      color: #890;
+      text-align: center;
+      margin-top: 20px;
+    }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .subscribe-section {
+      height: 100vh;
+      background: url('https://www.transparenttextures.com/patterns/graph-paper.png'), #111;
+      background-size: contain;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .subscribe-section img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .subscribe-section h2 {
+      font-size: 2rem;
+      margin: 0 0 10px;
+    }
+
+    .subscribe-section p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .subscribe-button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .subscribe-button:hover {
+      background-color: darkred;
+    }
+    #rating-rute-container {
+      background: #111 url('https://www.transparenttextures.com/patterns/graph-paper.png');
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+      max-width: 500px;
+      margin: 40px auto;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    #rating-rute-container h2 {
+      margin-bottom: 10px;
+    }
+
+    .rating-rute-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 1.4rem;
+      margin-top: 20px;
+    }
+
+    .rating-rute-buttons button {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .rating-rute-buttons button:hover {
+      color: #ffcc00;
+      transform: scale(1.1);
+    }
+
+    .rating-rute-count {
+      font-weight: bold;
+    }
+    #rating-rute-container {
+      background: #111 url('https://www.transparenttextures.com/patterns/graph-paper.png');
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+      max-width: 500px;
+      margin: 40px auto;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    #rating-rute-container h2 {
+      margin-bottom: 10px;
+    }
+
+    .rating-rute-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 1.4rem;
+      margin: 20px 0;
+    }
+
+    .rating-rute-buttons button {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .rating-rute-buttons button:hover {
+      color: #ffcc00;
+      transform: scale(1.1);
+    }
+
+    .rating-rute-count {
+      font-weight: bold;
+    }
+
+    #rute-review-input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    #rute-review-button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background: red;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #rute-review-button:hover {
+      background: darkred;
+    }
+
+    #rute-review-list {
+      margin-top: 20px;
+      text-align: left;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .rute-review-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px;
+      margin-bottom: 6px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+    #rating-rute-container {
+      background: #111 url('https://www.transparenttextures.com/patterns/graph-paper.png');
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+      max-width: 500px;
+      margin: 40px auto;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    .rating-rute-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 1.4rem;
+      margin: 20px 0;
+    }
+
+    .rating-rute-buttons button {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .rating-rute-buttons button.active {
+      color: #00ff99;
+      font-weight: bold;
+    }
+
+    .rating-rute-buttons button:hover {
+      color: #ffcc00;
+      transform: scale(1.1);
+    }
+
+    .rating-rute-count {
+      font-weight: bold;
+    }
+
+    #rute-review-input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    #rute-review-button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background: red;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #rute-review-button:hover {
+      background: darkred;
+    }
+
+    #rute-review-list {
+      margin-top: 20px;
+      text-align: left;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .rute-review-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px;
+      margin-bottom: 6px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .rute-delete-btn {
+      background: none;
+      border: none;
+      color: #f66;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .rute-delete-btn:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <table width=100% height=10% border=0 cellpadding=5 cellspacing=0>
+    <tr><td bgcolor=#1B4F72 colspan = 3>
+    <b><font size=2 color=#F6DDCC></b>
+    <h1>WELCOME USER KAG</h1>
+    <h2>File Route Relasi "PADALARANG-PURWOKERTO"(NEW SCALE)</h2>
+    <a class="button" href="https://safelinku.com/akun1link">FILE PENTING</a>
+    <a class="button" href="https://safelinku.com/akun2link">PASSWORD</a>
+    <a class="button" href="https://safelinku.com/akun3link">DEP</a>
+    <a class="button" href="https://safelinku.com/akun4link">DEP</a>
+    <a class="button" href="https://safelinku.com/akun5link">DEP</a>
+    <p class="note">Pastikan semua objek terinstall agar rute tampil sempurna.</p>
+    <table width=100% height=10% border=0 cellpadding=5 cellspacing=0>
+    <tr><td bgcolor=#D35400 colspan = 3>
+    <b><font size=2 color=#F6DDCC>  NOTE:anda boleh mengeshare lagi, dengan syarat harus menggunakan SITUS KAG ini, jangan anggap ini rute milikmu Karena ini akan terus update! </b>
+    </tr></table></p>
+    <hr>
+    <h2>Rating Dan Saran</h2>
+  <p>Berikan Like atau Dislike & tulis ulasanmu</p>
+
+  <div class="rating-rute-buttons">
+    <button id="rute-like-btn" onclick="ruteToggleLike()">👍 <span id="rute-like-count">0</span></button>
+    <button id="rute-dislike-btn" onclick="ruteToggleDislike()">👎 <span id="rute-dislike-count">0</span></button>
+  </div>
+
+  <textarea id="rute-review-input" rows="3" placeholder="Tulis ulasan kamu..."></textarea>
+  <br>
+  <button id="rute-review-button" onclick="submitRuteReview()">Kirim Ulasan</button>
+
+  <div id="rute-review-list"></div>
+
+  <script>
+    let ruteLikeCount = parseInt(localStorage.getItem('ruteLikeCount')) || 0;
+    let ruteDislikeCount = parseInt(localStorage.getItem('ruteDislikeCount')) || 0;
+    let ruteUserVote = localStorage.getItem('ruteUserVote') || null;
+    let ruteReviewList = JSON.parse(localStorage.getItem('ruteReviewList')) || [];
+
+    function updateVoteDisplay() {
+      document.getElementById('rute-like-count').textContent = ruteLikeCount;
+      document.getElementById('rute-dislike-count').textContent = ruteDislikeCount;
+      document.getElementById('rute-like-btn').classList.toggle('active', ruteUserVote === 'like');
+      document.getElementById('rute-dislike-btn').classList.toggle('active', ruteUserVote === 'dislike');
+    }
+
+    function ruteToggleLike() {
+      if (ruteUserVote === 'like') {
+        ruteLikeCount--;
+        ruteUserVote = null;
+      } else {
+        if (ruteUserVote === 'dislike') ruteDislikeCount--;
+        ruteLikeCount++;
+        ruteUserVote = 'like';
+      }
+      saveVotes();
+    }
+
+    function ruteToggleDislike() {
+      if (ruteUserVote === 'dislike') {
+        ruteDislikeCount--;
+        ruteUserVote = null;
+      } else {
+        if (ruteUserVote === 'like') ruteLikeCount--;
+        ruteDislikeCount++;
+        ruteUserVote = 'dislike';
+      }
+      saveVotes();
+    }
+
+    function saveVotes() {
+      localStorage.setItem('ruteLikeCount', ruteLikeCount);
+      localStorage.setItem('ruteDislikeCount', ruteDislikeCount);
+      localStorage.setItem('ruteUserVote', ruteUserVote);
+      updateVoteDisplay();
+    }
+
+    function submitRuteReview() {
+      const input = document.getElementById('rute-review-input');
+      const review = input.value.trim();
+      if (review.length === 0) return;
+
+      ruteReviewList.push(review);
+      localStorage.setItem('ruteReviewList', JSON.stringify(ruteReviewList));
+      input.value = '';
+      renderRuteReviews();
+    }
+
+    function deleteRuteReview(index) {
+      ruteReviewList.splice(index, 1);
+      localStorage.setItem('ruteReviewList', JSON.stringify(ruteReviewList));
+      renderRuteReviews();
+    }
+
+    function renderRuteReviews() {
+      const listContainer = document.getElementById('rute-review-list');
+      listContainer.innerHTML = '';
+      ruteReviewList.forEach((review, i) => {
+        const div = document.createElement('div');
+        div.className = 'rute-review-item';
+        div.innerHTML = `<span>${review}</span><button class="rute-delete-btn" onclick="deleteRuteReview(${i})">hapus</button>`;
+        listContainer.appendChild(div);
+      });
+    }
+
+    // Load awal
+    updateVoteDisplay();
+    renderRuteReviews();
+  </script>
+    <hr>
+    <h3 style="text-align:center;">Dukung Proyek Ini</h3>
+    <p style="text-align:center; font-size:14px;">
+      Scan QR Code DANA berikut untuk donasi:<br>
+      <a class="button" href="https://drive.google.com/file/d/1S8dRDrCPGoCyz026sdTeT93N1D8fDyep/view?usp=drivesdk">OPEN</a>
+    </p>
+    <hr>
+    <table width=100% height=10% border=0 cellpadding=5 cellspacing=0>
+    <tr><td bgcolor=#D35400 colspan = 3>
+    <b><font size=2 color=#F6DDCC>  VIDEO  </b>
+    <tr><td bgcolor=#1B4F72 colspan = 3>
+    <b><i><font size=1 color=#D6EAF8> TUTORIAL </b>
+      <a class="button" href="https://drive.google.com/file/d/1S8dRDrCPGoCyz026sdTeT93N1D8fDyep/view?usp=drivesdk"> Tutorial Surveyor Mode: Mengenal Semua Tombol Rel (Trainz) </a>
+      <p class="note">TERIMAKASIH</p>
+    </p>
+    
+    <div class="subscribe-section">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/600px-YouTube_icon_%282013-2017%29.png" alt="YouTube Logo">
+    <h2>Jangan Lupa Subscribe!</h2>
+    <p>Dukung channel kami agar terus berkembang dan menyajikan konten menarik lainnya.</p>
+    <button class="subscribe-button">SUBSCRIBE</button>
+  </div>
+  </div>
+</body>
+</html>
